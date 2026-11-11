@@ -1,15 +1,11 @@
-SCHEDA SINTETICA DI TRINCEA - VERSIONE 4 APP (FOTO SEPARATE)
+SCHEDE TRINCEA V5 – accessi individuali e impostazioni
 
-1. Questa versione NON richiede modifiche al codice Google Apps Script già aggiornato alla v4.
-2. Caricare su GitHub i cinque file di questa cartella, sovrascrivendo le versioni precedenti.
-3. Aprire il sito dallo smartphone mentre è online, controllando che nel titolo appaia v4.
-4. Nella sezione E la voce "Documentazione fotografica eseguita" si compila con Sì o No.
-5. Le fotografie non possono essere aggiunte dalla scheda e non vengono mai inviate da questa versione a Google Drive.
-6. Il pulsante di sincronizzazione conserva il suo funzionamento sperimentale e la verifica delle ricevute.
-7. I record locali e le conferme v3 NON vengono cancellati dall'aggiornamento: stessa origine GitHub e stesso IndexedDB.
+Aggiornare i cinque file su GitHub. Non cancellare la memoria browser; le schede restano in IndexedDB.
+L’indirizzo Apps Script è precompilato. Il codice può essere conservato localmente con una scelta esplicita (solo su dispositivo personale).
+ATTENZIONE: conservare una credenziale nel localStorage la espone a chi accede al dispositivo e a eventuali script malevoli nella stessa origine.
+Su dispositivi condivisi non selezionare Ricorda il codice. Usa Dimentica codice salvato per cancellare la credenziale.
 
-AVVERTENZE
-- Se esistono schede precedenti con fotografie allegate, queste restano nei vecchi record locali e negli eventuali backup JSON. La v4 le esclude esplicitamente dagli invii a Drive; non le cancella in modo irreversibile.
-- Conservare periodicamente backup delle schede, soprattutto prima di pulire i dati del browser o sostituire telefono.
-- Testare con schede fittizie prima dell'utilizzo sul cantiere.
-- Non caricare su GitHub codici personali, dati delle trincee compilate o fotografie.
+Per aggiungere archeologi utilizzare lo script separato Istruzioni_Accessi_Archeologi.gs su Google Apps Script.
+Non pubblicare token su GitHub, né inserirli in questa chat.
+
+Lo stato della sincronizzazione e l'identificazione individuale rimangono in fase di test; non usare dati archeologici riservati finché non è completata la verifica end-to-end di più operatori.
