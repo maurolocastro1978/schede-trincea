@@ -1,31 +1,20 @@
-SCHEDA SINTETICA DI TRINCEA – PROTOTIPO v1
-Cisterna–Valmontone | Lotto 3
+SCHEDA SINTETICA DI TRINCEA - VERSIONE 3, TEST CONFERMA RICEVUTA
 
-CONTENUTO
-index.html: applicazione mobile per compilare, salvare, riaprire ed esportare schede.
-manifest.webmanifest, sw.js, icon.svg: installazione come web app offline (PWA).
+1. PRIMA aggiornare Codice.gs in Google Apps Script usando il contenuto completo di Codice_Apps_Script_v3.gs.
+   NON sostituire le proprietà script ARCHIVIO_FOLDER_ID e ARCHEOLOGI_TOKEN: rimangono quelle già configurate.
+2. Apps Script: Esegui il deployment > Gestisci deployment > Modifica > Versione: Nuova versione > Esegui il deployment.
+   Mantenere lo STESSO indirizzo /exec del deployment esistente.
+3. SOLO DOPO caricare su GitHub i 5 file dell'app (index.html, sw.js, manifest.webmanifest, icon.svg, ISTRUZIONI.txt).
+   NON caricare su GitHub il file Codice_Apps_Script_v3.gs, che è destinato solo all'editor Apps Script.
+4. Aprire l'app dal telefono quando connesso, verificare la versione v3, compilare una scheda fittizia e sincronizzarla.
+5. Il pulsante segnala Sincronizzata SOLO dopo avere letto una conferma del server.
+   Se non arriva conferma, la scheda rimane salvata e non confermata.
 
-COME PROVARLA SUL COMPUTER
-Aprire index.html in Chrome. Se il browser consente IndexedDB per file locali, il salvataggio funzionera'.
-Per un test affidabile utilizzare un server locale, ad esempio: python -m http.server 8000
-Poi visitare http://localhost:8000.
-
-COME USARLA SULLO SMARTPHONE
-L'app deve essere pubblicata su un sito HTTPS (es. spazio web aziendale o hosting statico).
-Aprire il link sullo smartphone e usare la voce del browser "Aggiungi a schermata Home" / "Installa app".
-Aprirla una prima volta mentre c'e' connessione; in seguito puo' funzionare offline.
-ATTENZIONE: aprire il file HTML come allegato sul telefono NON equivale a installare l'app offline.
-
-DATI E SICUREZZA
-Tutti i dati, incluse le fotografie, vengono salvati nel browser del singolo dispositivo mediante IndexedDB.
-Non esiste sincronizzazione con altri archeologi, login, archivio cloud o backup automatico.
-Le modifiche non salvate manualmente possono andare perse.
-Utilizzare Archivio locale > Esporta backup JSON regolarmente, conservando il backup altrove.
-La cancellazione dei dati del sito/browser puo' eliminare tutte le schede locali.
-La numerazione duplicata viene segnalata solo nell'archivio dello stesso dispositivo.
-Il CSV esporta i dati della scheda ma non i file delle foto; il JSON comprende le foto.
-Per la produzione sono necessari ulteriori test e un servizio di sincronizzazione.
-
-
-VERSIONE 2 - TEST INVIO DRIVE
-Sostituisci su GitHub index.html e sw.js. In app, inserisci URL Apps Script e codice personale solo nella pagina aperta. Usa schede di test: il browser non può confermare la ricezione. Verifica manualmente la presenza dei file nella cartella Drive prima di considerare riuscita la sincronizzazione. Non condividere il codice personale.
+NOTE IMPORTANTI
+- Usa SOLO dati di prova fino alla validazione del flusso e della sicurezza.
+- Non mettere mai il codice personale nel repository GitHub, nei log o nelle chat.
+- Il codice personale resta solo in memoria durante la sessione: reinserirlo dopo la riapertura.
+- Fotografie grandi possono superare i limiti di Apps Script; è necessaria una prova dedicata.
+- Le ricevute server restano in cache 6 ore: la conferma è immediata, non un indice permanente.
+- L'archivio locale resta indipendente da Drive e non viene cancellato.
+- La versione 3 mantiene le schede esistenti nel database locale sullo stesso dominio.
