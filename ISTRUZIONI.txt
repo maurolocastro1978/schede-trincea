@@ -25,3 +25,7 @@ La cancellazione dei dati del sito/browser puo' eliminare tutte le schede locali
 La numerazione duplicata viene segnalata solo nell'archivio dello stesso dispositivo.
 Il CSV esporta i dati della scheda ma non i file delle foto; il JSON comprende le foto.
 Per la produzione sono necessari ulteriori test e un servizio di sincronizzazione.
+
+
+VERSIONE 2 - TEST INVIO DRIVE
+Sostituisci su GitHub index.html e sw.js. In app, inserisci URL Apps Script e codice personale solo nella pagina aperta. Usa schede di test: il browser non può confermare la ricezione. Verifica manualmente la presenza dei file nella cartella Drive prima di considerare riuscita la sincronizzazione. Non condividere il codice personale.
