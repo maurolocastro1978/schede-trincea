@@ -1,20 +1,15 @@
-SCHEDA SINTETICA DI TRINCEA - VERSIONE 3, TEST CONFERMA RICEVUTA
+SCHEDA SINTETICA DI TRINCEA - VERSIONE 4 APP (FOTO SEPARATE)
 
-1. PRIMA aggiornare Codice.gs in Google Apps Script usando il contenuto completo di Codice_Apps_Script_v3.gs.
-   NON sostituire le proprietà script ARCHIVIO_FOLDER_ID e ARCHEOLOGI_TOKEN: rimangono quelle già configurate.
-2. Apps Script: Esegui il deployment > Gestisci deployment > Modifica > Versione: Nuova versione > Esegui il deployment.
-   Mantenere lo STESSO indirizzo /exec del deployment esistente.
-3. SOLO DOPO caricare su GitHub i 5 file dell'app (index.html, sw.js, manifest.webmanifest, icon.svg, ISTRUZIONI.txt).
-   NON caricare su GitHub il file Codice_Apps_Script_v3.gs, che è destinato solo all'editor Apps Script.
-4. Aprire l'app dal telefono quando connesso, verificare la versione v3, compilare una scheda fittizia e sincronizzarla.
-5. Il pulsante segnala Sincronizzata SOLO dopo avere letto una conferma del server.
-   Se non arriva conferma, la scheda rimane salvata e non confermata.
+1. Questa versione NON richiede modifiche al codice Google Apps Script già aggiornato alla v4.
+2. Caricare su GitHub i cinque file di questa cartella, sovrascrivendo le versioni precedenti.
+3. Aprire il sito dallo smartphone mentre è online, controllando che nel titolo appaia v4.
+4. Nella sezione E la voce "Documentazione fotografica eseguita" si compila con Sì o No.
+5. Le fotografie non possono essere aggiunte dalla scheda e non vengono mai inviate da questa versione a Google Drive.
+6. Il pulsante di sincronizzazione conserva il suo funzionamento sperimentale e la verifica delle ricevute.
+7. I record locali e le conferme v3 NON vengono cancellati dall'aggiornamento: stessa origine GitHub e stesso IndexedDB.
 
-NOTE IMPORTANTI
-- Usa SOLO dati di prova fino alla validazione del flusso e della sicurezza.
-- Non mettere mai il codice personale nel repository GitHub, nei log o nelle chat.
-- Il codice personale resta solo in memoria durante la sessione: reinserirlo dopo la riapertura.
-- Fotografie grandi possono superare i limiti di Apps Script; è necessaria una prova dedicata.
-- Le ricevute server restano in cache 6 ore: la conferma è immediata, non un indice permanente.
-- L'archivio locale resta indipendente da Drive e non viene cancellato.
-- La versione 3 mantiene le schede esistenti nel database locale sullo stesso dominio.
+AVVERTENZE
+- Se esistono schede precedenti con fotografie allegate, queste restano nei vecchi record locali e negli eventuali backup JSON. La v4 le esclude esplicitamente dagli invii a Drive; non le cancella in modo irreversibile.
+- Conservare periodicamente backup delle schede, soprattutto prima di pulire i dati del browser o sostituire telefono.
+- Testare con schede fittizie prima dell'utilizzo sul cantiere.
+- Non caricare su GitHub codici personali, dati delle trincee compilate o fotografie.
