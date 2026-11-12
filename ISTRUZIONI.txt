@@ -1,11 +1,13 @@
-SCHEDE TRINCEA V5 – accessi individuali e impostazioni
+SCHEDE TRINCEA V6 – Controllo anti-duplicazione locale
 
-Aggiornare i cinque file su GitHub. Non cancellare la memoria browser; le schede restano in IndexedDB.
-L’indirizzo Apps Script è precompilato. Il codice può essere conservato localmente con una scelta esplicita (solo su dispositivo personale).
-ATTENZIONE: conservare una credenziale nel localStorage la espone a chi accede al dispositivo e a eventuali script malevoli nella stessa origine.
-Su dispositivi condivisi non selezionare Ricorda il codice. Usa Dimentica codice salvato per cancellare la credenziale.
+Caricare su GitHub i file index.html, sw.js, manifest.webmanifest e icon.svg nella radice del repository schede-trincea, sostituendo quelli esistenti.
 
-Per aggiungere archeologi utilizzare lo script separato Istruzioni_Accessi_Archeologi.gs su Google Apps Script.
-Non pubblicare token su GitHub, né inserirli in questa chat.
+La v6 blocca il salvataggio di una nuova scheda quando sullo stesso dispositivo esiste già un numero trincea equivalente (TR-312 / tr 312 / TR_312). Propone di aprire la scheda già salvata. La modifica della scheda esistente continua a essere consentita.
 
-Lo stato della sincronizzazione e l'identificazione individuale rimangono in fase di test; non usare dati archeologici riservati finché non è completata la verifica end-to-end di più operatori.
+Il controllo sul server per conflitti tra telefoni diversi resta indispensabile ed è indipendente da questa modifica.
+
+I dati IndexedDB locali non vengono cancellati; non cancellare la memoria del browser. Su smartphone può essere necessario chiudere e riaprire l’app dopo l’aggiornamento del service worker.
+
+L’importazione di backup rifiuta un duplicato locale senza applicare parzialmente l’importazione. Prima dell’installazione esportare un backup JSON.
+
+Non sono state modificate le credenziali personali o l’endpoint di sincronizzazione.
