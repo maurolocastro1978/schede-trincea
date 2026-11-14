@@ -63,10 +63,11 @@ async function testSyncDrive(){
             headers:{'Content-Type':'text/plain;charset=utf-8'},
             body:JSON.stringify({token,scheda:{id:rec.id,fields:rec.fields,strata:rec.strata,modified:rec.modified},receipt})});
         }catch(e){/* nessuna ricevuta: resterà da verificare */}
-        for(let i=0;i<3&&!verified;i++){
-          await new Promise(r=>setTimeout(r,700*(i+1)));
-          verified=await checkReceipt(u,receipt);
-        }
+        
+for(let i=0;i<6&&!verified;i++){
+  await new Promise(r=>setTimeout(r,3000));
+  verified=await checkReceipt(u,receipt,6500);
+}
       }
       if(verified){
         localStorage.setItem(ackKey(rec),'1');ok++;
